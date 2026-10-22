@@ -1,0 +1,11 @@
+{
+  "_note": "Sample mentor profiles for demonstration only.",
+  "mentors": [
+    { "id": "m1", "name": "Thabo N.", "role": "Software Engineer", "cat": "Industry", "area": "Technology", "bio": "Helps with first IT jobs and portfolios." },
+    { "id": "m2", "name": "Lerato M.", "role": "Career Coach", "cat": "Career Coach", "area": "CV and interviews", "bio": "Interview practice and CV reviews." },
+    { "id": "m3", "name": "Sipho D.", "role": "Final-year Student", "cat": "Student", "area": "Study to work", "bio": "Shares how to move from study into work." },
+    { "id": "m4", "name": "Naledi K.", "role": "Founder, spaza supply business", "cat": "Entrepreneur", "area": "Starting small", "bio": "Pricing, customers and first sales." },
+    { "id": "m5", "name": "Ayanda P.", "role": "HR Officer", "cat": "Industry", "area": "Recruitment", "bio": "What employers look for in entry-level hires." },
+    { "id": "m6", "name": "Kagiso S.", "role": "Marketing Graduate", "cat": "Student", "area": "Creative and social media", "bio": "Building a portfolio with no budget." }
+  ]
+}

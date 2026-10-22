@@ -1,0 +1,17 @@
+{
+  "_note": "Sample data for demonstration only. Not real vacancies.",
+  "jobs": [
+    { "id": "j1", "title": "IT Support Intern", "org": "Sample Tech Hub", "type": "Internship", "province": "Gauteng", "industry": "Technology", "remote": false, "level": "None", "note": "12-month paid internship, matric required" },
+    { "id": "j2", "title": "Customer Service Agent", "org": "Sample Retail Group", "type": "Job", "province": "Gauteng", "industry": "Retail", "remote": false, "level": "Some experience", "note": "Entry-level, shift work, training provided" },
+    { "id": "j3", "title": "Data Capturer Learnership", "org": "Sample Skills Academy", "type": "Learnership", "province": "KwaZulu-Natal", "industry": "Administration", "remote": false, "level": "None", "note": "NQF 3 learnership with stipend" },
+    { "id": "j4", "title": "Community Reading Volunteer", "org": "Sample Literacy Trust", "type": "Volunteer", "province": "Limpopo", "industry": "Education", "remote": false, "level": "None", "note": "Weekends, reference letter provided" },
+    { "id": "j5", "title": "Social Media Micro-Internship", "org": "Sample Creative Studio", "type": "Micro-internship", "province": "Western Cape", "industry": "Creative", "remote": true, "level": "None", "note": "2-week remote project, low-data friendly" },
+    { "id": "j6", "title": "Junior Web Developer", "org": "Sample Digital Co", "type": "Job", "province": "Western Cape", "industry": "Technology", "remote": true, "level": "Some experience", "note": "Portfolio required" },
+    { "id": "j7", "title": "Solar Installer Learnership", "org": "Sample Green Energy", "type": "Learnership", "province": "Eastern Cape", "industry": "Construction", "remote": false, "level": "None", "note": "Practical trade training" },
+    { "id": "j8", "title": "Clinic Admin Assistant", "org": "Sample Health Network", "type": "Job", "province": "Mpumalanga", "industry": "Healthcare", "remote": false, "level": "None", "note": "Entry-level, basic computer skills" },
+    { "id": "j9", "title": "Farm Records Micro-Internship", "org": "Sample Agri Co-op", "type": "Micro-internship", "province": "Free State", "industry": "Agriculture", "remote": true, "level": "None", "note": "Spreadsheet tasks, 10 hours total" },
+    { "id": "j10", "title": "Youth Sports Coach Volunteer", "org": "Sample Community Sports", "type": "Volunteer", "province": "North West", "industry": "Education", "remote": false, "level": "None", "note": "Builds leadership evidence for your passport" },
+    { "id": "j11", "title": "Hospitality Trainee", "org": "Sample Lodge Group", "type": "Internship", "province": "Northern Cape", "industry": "Hospitality", "remote": false, "level": "None", "note": "Accommodation provided" },
+    { "id": "j12", "title": "Bookkeeping Assistant", "org": "Sample Accounting Services", "type": "Job", "province": "Gauteng", "industry": "Finance", "remote": true, "level": "Some experience", "note": "Part-time remote option" }
+  ]
+}
