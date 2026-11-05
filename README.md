@@ -17,7 +17,7 @@ Open http://localhost:8000 on your computer (or on your phone using your compute
 ## What is inside
 - `index.html` app shell, `manifest.webmanifest`, `sw.js` (offline caching)
 - `js/scoring-engine.js` Income Mobility Score: 70% Work + 15% Money + 15% Business, rule-based and transparent
-- `js/screens.js` all 8 screens; `js/app.js` routing and actions; `js/i18n.js` English, isiZulu, Sepedi, Xitsonga, Setswana
+- `js/screens.js` all 8 screens; `js/app.js` routing and actions; `js/i18n.js` core UI labels in all 11 official South African languages
 - `data/` sample opportunities and mentors (fictional)
 
 ## Demo tip
@@ -25,6 +25,6 @@ On the first screen tap "Try the demo as Sarah" to land straight on the dashboar
 
 ## Honest limitations
 - Data is stored only on the device (localStorage). There is no server, login or real verification.
-- Translations in non-English languages are drafts. Have native speakers review them before judging.
+- Non-English translations are drafts, and some screen copy still falls back to English. Have native speakers review translations before launch.
 - Experience Builder uses keyword rules, not a real AI model.
 - If you change any file, bump `CACHE` in `sw.js` so phones pick up the update.
