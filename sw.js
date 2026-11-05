@@ -1,11 +1,12 @@
 // RisePath service worker: precache the app shell, then stale-while-revalidate.
-const CACHE = 'risepath-v2';
+const CACHE = 'risepath-v3';
 const SHELL = [
   './', './index.html', './manifest.webmanifest',
   './css/style.css',
   './js/i18n.js', './js/validation.js', './js/store.js', './js/scoring-engine.js', './js/screens.js', './js/app.js',
   './opportunities.json', './mentors.json',
-  './assets/icons/icon.svg', './assets/icons/icon-192.png', './assets/icons/icon-512.png'
+  './assets/icons/icon.svg', './assets/icons/icon-192.png', './assets/icons/icon-512.png',
+  './assets/images/student-collaboration.jpg'
 ];
 
 self.addEventListener('install', e => {

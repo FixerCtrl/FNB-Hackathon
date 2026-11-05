@@ -62,6 +62,30 @@ const Screens = (() => {
   const bar = (label, p, cls = '') => `<div class="bar"><div class="bl"><span>${e(label)}</span><b>${p}%</b></div><div class="bt" role="progressbar" aria-label="${e(label)}" aria-valuenow="${p}" aria-valuemin="0" aria-valuemax="100"><i class="${cls}" style="width:${p}%"></i></div></div>`;
   const rand = n => 'R' + Number(n || 0).toLocaleString('en-ZA');
 
+  function welcome() {
+    const jobs = data.jobs.slice(0, 3), mentors = data.mentors.slice(0, 3);
+    return `<div class="welcome-page">
+      <header class="welcome-nav">
+        <a class="welcome-logo" href="#/welcome" aria-label="RisePath home">Rise<b>Path</b></a>
+        <nav class="welcome-links" aria-label="Explore RisePath"><a href="#/jobs">${t('jobs')}</a><a href="#/mentors">${t('mentors')}</a><a href="#/passport">${t('passport')}</a></nav>
+        <div class="welcome-nav-actions">${langSel(S().settings.lang)}<a class="btn sec sm" href="#/onboard">Get started</a><button class="btn sm" data-click="demo">Try the demo</button></div>
+      </header>
+      <section class="welcome-hero" aria-labelledby="welcome-title">
+        <img class="welcome-photo" src="assets/images/student-collaboration.jpg" alt="South African students working together around a laptop">
+        <div class="welcome-hero-copy"><p class="welcome-kicker">Built for young South Africans</p><h1 id="welcome-title">Turn your skills into a path forward.</h1><p class="welcome-lead">Find work and learnerships, grow a record of what you can do, and get guidance for your next move.</p><div class="welcome-hero-actions"><a class="btn welcome-primary" href="#/onboard">Build your profile</a><a class="welcome-text-link" href="#/jobs">Explore opportunities <span aria-hidden="true">&rarr;</span></a></div></div>
+        <p class="welcome-image-credit">A practical path from experience to opportunity</p>
+      </section>
+      <section class="welcome-section welcome-paths" aria-labelledby="paths-title"><div class="welcome-section-head"><p class="welcome-kicker dark">A platform for your next step</p><h2 id="paths-title">Make progress that adds up.</h2></div><div class="welcome-feature-grid">
+        <a class="welcome-feature" href="#/jobs"><span class="feature-index">01</span><h3>Find opportunities</h3><p>Explore entry-level jobs, internships, learnerships and community experience across South Africa.</p><span class="feature-link">Browse opportunities <span aria-hidden="true">&rarr;</span></span></a>
+        <a class="welcome-feature" href="#/passport"><span class="feature-index">02</span><h3>Show what you can do</h3><p>Bring together skills, certificates and informal experience in one clear profile.</p><span class="feature-link">Build your Skill Passport <span aria-hidden="true">&rarr;</span></span></a>
+        <a class="welcome-feature" href="#/mentors"><span class="feature-index">03</span><h3>Get guidance</h3><p>Learn from people who can help you prepare for work, study and small business.</p><span class="feature-link">Meet the mentors <span aria-hidden="true">&rarr;</span></span></a>
+      </div></section>
+      <section class="welcome-opportunities" aria-labelledby="opportunities-title"><div class="welcome-section welcome-opportunity-inner"><div class="welcome-section-head"><p class="welcome-kicker dark">A place to start</p><h2 id="opportunities-title">Opportunities to explore</h2><p class="muted">Sample listings are shown for demonstration. Check details with the provider before applying.</p></div><div class="welcome-job-grid">${!data.loaded ? '<p class="muted">Loading sample opportunities...</p>' : data.failed ? '<p class="muted">Sample opportunities are temporarily unavailable.</p>' : jobs.map(j => `<article class="welcome-job"><div class="welcome-job-meta"><span>${e(j.type)}</span><span>${e(j.province)}</span></div><h3>${e(j.title)}</h3><p>${e(j.org)}</p><a href="#/jobs">View opportunity <span aria-hidden="true">&rarr;</span></a></article>`).join('')}</div><a class="btn welcome-dark-link" href="#/jobs">See all opportunities</a></div></section>
+      <section class="welcome-section welcome-mentors" aria-labelledby="mentors-title"><div class="welcome-mentor-copy"><p class="welcome-kicker dark">Learn from experience</p><h2 id="mentors-title">A little guidance can open a new door.</h2><p class="muted">Explore mentor profiles for career advice, portfolio feedback and practical next steps.</p><a class="btn" href="#/mentors">Explore mentors</a></div><div class="welcome-mentor-list">${!data.loaded ? '<p class="muted">Loading mentor profiles...</p>' : mentors.map(m => `<article class="welcome-mentor"><span class="mentor-initials" aria-hidden="true">${e(initials(m.name))}</span><div><h3>${e(m.name)}</h3><p>${e(m.role)} <span aria-hidden="true">&middot;</span> ${e(m.area)}</p></div></article>`).join('')}<p class="welcome-sample-note">Sample mentor profiles for demonstration.</p></div></section>
+      <footer class="welcome-footer"><a class="welcome-logo" href="#/welcome">Rise<b>Path</b></a><p>Small steps. Real progress.</p><div><a href="#/jobs">${t('jobs')}</a><a href="#/mentors">${t('mentors')}</a><a href="#/onboard">Create a profile</a></div></footer>
+    </div>`;
+  }
+
   // ---------- Onboarding ----------
   function onboard(ob) {
     const dots = `<div class="dots" aria-hidden="true">${[0, 1, 2, 3].map(i => `<i class="${i <= ob.step ? 'on' : ''}"></i>`).join('')}</div>`;
@@ -237,5 +261,5 @@ const Screens = (() => {
     <button class="btn sec full" data-click="reset">Reset all my data</button>`;
   }
 
-  return { onboard, home, jobs, passport, experience, mentors, money, business, profile, data, ui, jobList, jobChips, budgetSummary, bizScore, bar, translate, PROVINCES, EDU, SKILLS, INTERESTS };
+  return { welcome, onboard, home, jobs, passport, experience, mentors, money, business, profile, data, ui, jobList, jobChips, budgetSummary, bizScore, bar, translate, PROVINCES, EDU, SKILLS, INTERESTS };
 })();

@@ -24,12 +24,14 @@ const App = (() => {
     document.documentElement.lang = s.settings.lang === 'nso' ? 'nso' : s.settings.lang;
     document.body.classList.toggle('lowdata', !!s.settings.lowData);
     let r = (location.hash || '#/home').replace(/^#\/?/, '') || 'home';
-    if (!s.profile) r = 'onboard';
-    else if (r === 'onboard' || !Screens[r] || typeof Screens[r] !== 'function') r = 'home';
+    if (!s.profile && (r === 'home' || r === 'welcome')) r = 'welcome';
+    else if (s.profile && (r === 'onboard' || r === 'welcome')) r = 'home';
+    else if (!Screens[r] || typeof Screens[r] !== 'function') r = s.profile ? 'home' : 'welcome';
+    document.body.classList.toggle('public-home', r === 'welcome');
     $('#view').innerHTML = Screens[r](ob);
     const nav = $('#nav');
-    nav.hidden = r === 'onboard';
-    nav.innerHTML = r === 'onboard' ? '' : navHtml(r);
+    nav.hidden = r === 'onboard' || r === 'welcome';
+    nav.innerHTML = nav.hidden ? '' : navHtml(r);
     window.scrollTo(0, 0);
     if (deferredInstall && $('#installBox')) $('#installBox').hidden = false;
   }
@@ -41,6 +43,7 @@ const App = (() => {
 
   const A = {
     // --- onboarding
+    begin() { ob.step = 0; ob.err = ''; go('onboard'); },
     obf(el) { ob[el.dataset.k] = V.clean(el.value, 140); },
     chip(el) { toggle(ob[el.dataset.g], el.dataset.v); keepScroll(redo); },
     lang(el) { ob.lang = el.value; Store.set(s => { s.settings.lang = el.value; }); keepScroll(redo); },

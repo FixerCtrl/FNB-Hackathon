@@ -90,3 +90,93 @@ nav a[aria-current=page]{color:var(--ad);font-weight:700}
 	.home-main,.home-aside{min-width:0}
 	.home-aside{position:sticky;top:24px}
 }
+
+body.public-home{background:#F4F6F1}
+body.public-home #app{width:100%;max-width:1440px;margin:0 auto;background:#F7F8F4;box-shadow:none}
+body.public-home main{max-width:none;margin:0;padding:0 0 64px}
+.welcome-page{overflow:hidden;color:#172D2B}
+.welcome-nav{min-height:84px;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:12px 5.5%;background:#fff}
+.welcome-logo{flex:none;color:var(--p);font-size:1.45rem;font-weight:800;text-decoration:none}
+.welcome-logo b{color:var(--ad)}
+.welcome-links{display:flex;align-items:center;gap:30px}
+.welcome-links a,.welcome-footer a{color:inherit;text-decoration:none;font-weight:600}
+.welcome-links a:hover,.welcome-footer a:hover{text-decoration:underline;text-underline-offset:4px}
+.welcome-nav-actions{display:flex;align-items:center;gap:8px}
+.welcome-nav-actions .fld{width:132px;margin:0}
+.welcome-nav-actions .fld>span{font-size:.76rem}
+.welcome-nav-actions select{padding:7px 8px;min-height:40px}
+.welcome-hero{position:relative;display:flex;align-items:center;isolation:isolate;min-height:570px;background:#142522;color:#fff;overflow:hidden}
+.welcome-photo{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:center 42%}
+.welcome-hero::before{content:"";position:absolute;inset:0;z-index:-1;background:rgba(11,28,26,.61)}
+.welcome-hero-copy{width:100%;max-width:1320px;margin:0 auto;padding:104px 5.5% 112px}
+.welcome-kicker{margin:0 0 18px;color:#E2E9A5;font-size:.8rem;font-weight:700;text-transform:uppercase}
+.welcome-kicker.dark{color:#08796F}
+.welcome-hero h1{max-width:760px;margin:0 0 20px;font:500 58px/1.05 Georgia,"Times New Roman",serif}
+.welcome-lead{max-width:600px;margin:0;color:#F1F4F1;font-size:1.16rem;line-height:1.6}
+.welcome-hero-actions{display:flex;align-items:center;gap:24px;margin-top:30px}
+.welcome-primary{background:#DDEA89;color:#172D2B}
+.welcome-primary:hover{background:#E7F2A5}
+.welcome-text-link{color:#fff;font-weight:700;text-decoration:none}
+.welcome-text-link span,.feature-link span,.welcome-job>a span{padding-left:6px}
+.welcome-image-credit{position:absolute;right:5.5%;bottom:18px;margin:0;color:#fff;font-size:.75rem}
+.welcome-section{max-width:1320px;margin:0 auto;padding:76px 5.5%}
+.welcome-section-head{max-width:690px;margin-bottom:32px}
+.welcome-section h2{margin:0 0 14px;font:500 38px/1.12 Georgia,"Times New Roman",serif;color:#172D2B}
+.welcome-section-head .muted{max-width:620px}
+.welcome-feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid #D4DBD4}
+.welcome-feature{display:flex;min-height:225px;flex-direction:column;align-items:flex-start;padding:24px 28px 20px 0;color:inherit;text-decoration:none;border-bottom:1px solid #D4DBD4}
+.welcome-feature+.welcome-feature{padding-left:28px;border-left:1px solid #D4DBD4}
+.feature-index{color:#08796F;font-size:.84rem;font-weight:700}
+.welcome-feature h3{margin:20px 0 8px;font-size:1.14rem}
+.welcome-feature p{max-width:350px;color:#596763;line-height:1.6}
+.feature-link{margin-top:auto;padding-top:16px;color:#08796F;font-weight:700}
+.welcome-opportunities{background:#E8F0EB}
+.welcome-opportunity-inner{padding-top:72px;padding-bottom:76px}
+.welcome-job-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.welcome-job{min-height:188px;padding:20px;background:#fff;border:1px solid #D5DED7;border-radius:8px}
+.welcome-job-meta{display:flex;justify-content:space-between;gap:10px;color:#08796F;font-size:.8rem;font-weight:700}
+.welcome-job h3{margin:24px 0 7px;font-size:1.08rem;line-height:1.35}
+.welcome-job p{color:#65716C;font-size:.9rem}
+.welcome-job>a{display:inline-block;margin-top:14px;color:#08796F;font-size:.88rem;font-weight:700;text-decoration:none}
+.welcome-dark-link{margin-top:24px;background:#172D2B}
+.welcome-mentors{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);align-items:center;gap:64px}
+.welcome-mentor-copy{max-width:540px}
+.welcome-mentor-copy .muted{max-width:480px;margin-bottom:22px;line-height:1.6}
+.welcome-mentor-list{border-top:1px solid #D4DBD4}
+.welcome-mentor{display:flex;align-items:center;gap:16px;padding:17px 0;border-bottom:1px solid #D4DBD4}
+.mentor-initials{display:grid;width:44px;height:44px;flex:none;place-items:center;border-radius:50%;background:#DCE9DF;color:#185B52;font-weight:700}
+.welcome-mentor h3{margin:0 0 4px;font-size:1rem}
+.welcome-mentor p{margin:0;color:#65716C;font-size:.88rem}
+.welcome-sample-note{margin:12px 0 0;color:#65716C;font-size:.78rem}
+.welcome-footer{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:32px 5.5%;background:#172D2B;color:#fff}
+.welcome-footer p{margin:0;color:#D2DCD4}
+.welcome-footer>div{display:flex;flex-wrap:wrap;gap:20px}
+.welcome-footer a{font-size:.88rem}
+@media (max-width:760px){
+	body.public-home main{padding-bottom:32px}
+	.welcome-nav{display:grid;grid-template-columns:1fr;gap:10px;padding:14px 20px}
+	.welcome-links{display:none}
+	.welcome-nav-actions{display:grid;grid-template-columns:1fr auto auto;gap:6px}
+	.welcome-nav-actions .fld{width:auto;min-width:0}
+	.welcome-nav-actions .fld>span{font-size:.7rem}
+	.welcome-nav-actions .btn{padding:8px 10px;font-size:.82rem;white-space:nowrap}
+	.welcome-hero{min-height:570px;align-items:flex-end}
+	.welcome-photo{object-position:55% center}
+	.welcome-hero-copy{padding:72px 22px 84px}
+	.welcome-hero h1{max-width:520px;font-size:40px}
+	.welcome-lead{font-size:1rem}
+	.welcome-hero-actions{align-items:flex-start;flex-direction:column;gap:18px;margin-top:24px}
+	.welcome-image-credit{right:22px;bottom:14px;max-width:60%;text-align:right}
+	.welcome-section{padding:54px 22px}
+	.welcome-section h2{font-size:32px}
+	.welcome-feature-grid,.welcome-job-grid,.welcome-mentors{grid-template-columns:1fr}
+	.welcome-feature{min-height:0;padding:22px 0}
+	.welcome-feature+.welcome-feature{padding-left:0;border-left:0}
+	.welcome-feature h3{margin-top:12px}
+	.welcome-feature p{margin-bottom:10px}
+	.welcome-job-grid{gap:10px}
+	.welcome-job{min-height:0}
+	.welcome-mentors{gap:30px}
+	.welcome-footer{align-items:flex-start;flex-direction:column;padding:28px 22px}
+	.welcome-footer>div{gap:12px 18px}
+}
