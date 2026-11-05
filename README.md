@@ -18,7 +18,7 @@ Open http://localhost:8000 on your computer (or on your phone using your compute
 - `index.html` app shell, `manifest.webmanifest`, `sw.js` (offline caching)
 - `js/scoring-engine.js` Income Mobility Score: 70% Work + 15% Money + 15% Business, rule-based and transparent
 - `js/screens.js` all 8 screens; `js/app.js` routing and actions; `js/i18n.js` core UI labels in all 11 official South African languages
-- `data/` sample opportunities and mentors (fictional)
+- `opportunities.json` and `mentors.json` sample listings and mentor profiles (fictional)
 
 ## Demo tip
 On the first screen tap "Try the demo as Sarah" to land straight on the dashboard.
